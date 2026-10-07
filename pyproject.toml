@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "karmapash"
+version = "0.1.0"
+description = "LLM security gateway and prompt injection defense SDK"
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.10"
+
+dependencies = [
+    "sentence-transformers",
+    "torch",
+    "transformers",
+    "python-dotenv",
+    "groq",
+    "numpy",
+]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["karmapash*"]
+exclude = ["app*", "evaluation*", "karmapash_core*"]
